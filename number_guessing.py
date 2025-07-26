@@ -10,7 +10,7 @@ def random_number():
 if __name__ == "__main__":
     attempts = 0
     while attempts < 3:
-        user_num = int(input("From 1-100 guess the number I am thinking: \n"))
+        user_num = input("From 1-100 guess the number I am thinking:\n")
         computer_number =  random_number()
         if user_num == computer_number:
             print(f"YOU GUESSED {user_num} AND IT'S CORRECT!! WOOHOO!! HERE IS A FLOWER")
@@ -18,8 +18,13 @@ if __name__ == "__main__":
             break
         else:
             attempts +=1
+            print(a.oh_no)
             print(f"Oh no! You guessed {user_num} and it is NOT correct")
+            print("Try again")
 
+        if attempts == 3:
+            print(f"Oh damn, you lost! The number I was thinking was {computer_number}")
+            print(a.you_lost)
     
     
 
